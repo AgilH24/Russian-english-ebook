@@ -2,19 +2,38 @@ body {
     font-family: sans-serif;
     padding: 20px;
     background: #f9f9f9;
+    max-width: 900px;
+    margin: auto;
 }
 
 #popup {
     position: absolute;
     background: white;
     border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    z-index: 10;
+    padding: 15px 20px 20px 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    z-index: 100;
+    max-width: 300px;
+    min-width: 200px;
+    border-radius: 8px;
 }
 
-.hidden {
+#popup.hidden {
     display: none;
+}
+
+#popup .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: #999;
+}
+
+#popup .close-btn:hover {
+    color: #333;
 }
 
 .word {
@@ -25,9 +44,9 @@ body {
 textarea, input {
     font-family: monospace;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     box-sizing: border-box;
 }
 
@@ -39,9 +58,10 @@ textarea, input {
 
 #storyList li {
     cursor: pointer;
-    padding: 4px;
+    padding: 6px;
     border: 1px solid transparent;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+    border-radius: 4px;
 }
 
 #storyList li:hover {
@@ -52,4 +72,23 @@ textarea, input {
 #storyList li.selected {
     background-color: #bbd;
     font-weight: bold;
+}
+
+#addStoryForm {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 6px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#content {
+    margin-top: 20px;
+}
+
+h3 {
+    margin-bottom: 5px;
 }
