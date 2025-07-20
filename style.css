@@ -3,6 +3,7 @@ body {
     padding: 20px;
     background: #f9f9f9;
 }
+
 #popup {
     position: absolute;
     background: white;
@@ -11,10 +12,44 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     z-index: 10;
 }
+
 .hidden {
     display: none;
 }
+
 .word {
     cursor: pointer;
     color: blue;
+}
+
+textarea, input {
+    font-family: monospace;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+#storyList {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 300px;
+}
+
+#storyList li {
+    cursor: pointer;
+    padding: 4px;
+    border: 1px solid transparent;
+    margin-bottom: 4px;
+}
+
+#storyList li:hover {
+    background-color: #eef;
+    border-color: #99f;
+}
+
+#storyList li.selected {
+    background-color: #bbd;
+    font-weight: bold;
 }
