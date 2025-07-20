@@ -59,8 +59,8 @@ function renderStory(text, dictionary) {
                     <b>Translation:</b> ${entry.translation}<br>
                     <b>Grammar:</b> ${formatGrammar(entry.grammar)}
                 `;
-                popup.style.left = e.pageX + "px";
-                popup.style.top = e.pageY + "px";
+                //popup.style.left = e.pageX + "px";
+                //popup.style.top = e.pageY + "px";
                 popup.classList.remove("hidden");
             } else {
                 popup.classList.add("hidden");
