@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h2>Yeni Hikaye Ekle</h2>
-    <input id="storyTitleInput" type="text" placeholder="Hikaye başlığını yazın" style="width:300px;"/>
-    <br />
-    <textarea id="storyInput" rows="4" cols="50" placeholder="Hikayeyi buraya yazın..."></textarea>
-    <br />
-    <textarea id="dictInput" rows="8" cols="50" placeholder='Kelime sözlüğünü JSON formatında girin, örn:
-{
-  "Мальчик": {"translation": "Boy", "grammar": "noun, nominative"},
-  "увидел": {"translation": "saw", "grammar": "verb, past tense"}
-}'>
-    </textarea>
-    <br />
-    <button id="loadStoryBtn">Hikayeyi Ekle</button>
 
-    <hr />
+    <button id="showAddStoryBtn">Yeni Hikaye Ekle</button>
+
+    <div id="addStoryForm" style="display:none;">
+        <input id="storyTitleInput" type="text" placeholder="Hikaye başlığı" />
+        <br/>
+        <textarea id="storyInput" rows="4" placeholder="Hikayeyi yazın..."></textarea>
+        <br/>
+        <textarea id="dictInput" rows="8" placeholder='Kelime sözlüğü JSON formatında, örn:
+{
+  "Мальчик": {"translation": "Boy", "grammar": {"partOfSpeech": "noun", "case": "nominative"}}
+}'></textarea>
+        <br/>
+        <button id="loadStoryBtn">Hikayeyi Kaydet</button>
+        <button id="cancelAddStoryBtn">İptal</button>
+    </div>
+
+    <hr/>
 
     <h3>Hikayeler</h3>
     <ul id="storyList"></ul>
@@ -30,9 +33,14 @@
         <h3 id="currentStoryTitle"></h3>
         <p id="story"></p>
     </div>
-    <div id="popup" class="hidden"></div>
+
+    <div id="popup" class="hidden">
+        <span class="close-btn" title="Kapat">&times;</span>
+        <div id="popupContent"></div>
+    </div>
 
     <script src="data.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
