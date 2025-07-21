@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Russian-English E-Book</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Russian-English E-Book</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <button id="showAddStoryBtn">Yeni Hikaye Ekle</button>
+  <button id="showAddStoryBtn">Yeni Hikaye Ekle</button>
 
-    <div id="addStoryForm" style="display:none;">
-        <input id="storyTitleInput" type="text" placeholder="Hikaye başlığı" />
-        <br/>
-        <textarea id="storyInput" rows="4" placeholder="Hikayeyi yazın..."></textarea>
-        <br/>
-        <textarea id="dictInput" rows="8" placeholder='Kelime sözlüğü JSON formatında, örn:
+  <div id="addStoryForm" style="display:none;">
+    <input id="storyTitleInput" type="text" placeholder="Hikaye başlığı" />
+    <br/>
+    <textarea id="storyInput" rows="4" placeholder="Hikayeyi yazın..."></textarea>
+    <br/>
+    <textarea id="dictInput" rows="8" placeholder='Kelime sözlüğü JSON formatında, örn:
 {
-  "Мальчик": {"translation": "Boy", "grammar": {"partOfSpeech": "noun", "case": "nominative"}}
+  "настоящий": {
+    "base": "настоящий",
+    "translation": "real, true, present",
+    "type": "adjective",
+    "case": "nominative masculine singular",
+    "example": "Он искал настоящий смысл. (He sought true meaning.)"
+  }
 }'></textarea>
-        <br/>
-        <button id="loadStoryBtn">Hikayeyi Kaydet</button>
-        <button id="cancelAddStoryBtn">İptal</button>
-    </div>
+    <br/>
+    <button id="loadStoryBtn">Hikayeyi Kaydet</button>
+    <button id="cancelAddStoryBtn">İptal</button>
+  </div>
 
-    <hr/>
+  <hr/>
 
-    <h3>Hikayeler</h3>
-    <ul id="storyList"></ul>
+  <h3>Hikayeler</h3>
+  <ul id="storyList"></ul>
 
-    <div id="content">
-        <h3 id="currentStoryTitle"></h3>
-        <p id="story"></p>
-    </div>
+  <div id="content">
+    <h3 id="currentStoryTitle"></h3>
+    <p id="story"></p>
+  </div>
 
-    <div id="popup" class="hidden">
-        <span class="close-btn" title="Kapat">&times;</span>
-        <div id="popupContent"></div>
-    </div>
+  <div id="popup" class="hidden">
+    <span class="close-btn" title="Kapat">&times;</span>
+    <div id="popupContent"></div>
+  </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
