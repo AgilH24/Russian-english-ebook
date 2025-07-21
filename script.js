@@ -50,6 +50,16 @@ function createPopupContent(word, entry) {
 }
 
 function renderStory(text, storyDict) {
+const paragraphs = text.split(/\n\s*\n/); // Çift boşluk veya boş satırla ayır
+const formattedParagraphs = paragraphs.map(paragraph => {
+  const words = paragraph.split(" ").map(word => {
+    const clean = word.replace(/[.,!?;:()«»"'”“]/g, "");
+    return `<span class="word" data-word="${clean}">${word}</span>`;
+  });
+  return `<p>${words.join(" ")}</p>`;
+});
+storyEl.innerHTML = formattedParagraphs.join("");
+
   const words = text.split(" ").map(word => {
     const clean = word.replace(/[.,!?;:()«»"'”“]/g, "");
     return `<span class="word" data-word="${clean}">${word}</span>`;
