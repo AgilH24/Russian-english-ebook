@@ -1,98 +1,97 @@
 body {
-    font-family: sans-serif;
-    padding: 20px;
-    background: #f9f9f9;
-    max-width: 900px;
-    margin: auto;
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+  max-width: 900px;
+  margin: auto;
 }
 
 #popup {
-    position: fixed;  /* absolute yerine fixed yap */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 1px solid #ccc;
-    padding: 15px 20px 20px 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    z-index: 100;
-    max-width: 300px;
-    min-width: 200px;
-    border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px 20px 20px 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  max-width: 300px;
+  min-width: 200px;
+  border-radius: 8px;
 }
 
-
 #popup.hidden {
-    display: none;
+  display: none;
 }
 
 #popup .close-btn {
-    position: absolute;
-    top: 5px;
-    right: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
-    color: #999;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #999;
 }
 
 #popup .close-btn:hover {
-    color: #333;
+  color: #333;
 }
 
 .word {
-    cursor: pointer;
-    color: blue;
+  cursor: pointer;
+  color: blue;
 }
 
 textarea, input {
-    font-family: monospace;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 600px;
-    box-sizing: border-box;
+  font-family: monospace;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
 }
 
 #storyList {
-    list-style-type: none;
-    padding-left: 0;
-    max-width: 300px;
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 300px;
 }
 
 #storyList li {
-    cursor: pointer;
-    padding: 6px;
-    border: 1px solid transparent;
-    margin-bottom: 5px;
-    border-radius: 4px;
+  cursor: pointer;
+  padding: 6px;
+  border: 1px solid transparent;
+  margin-bottom: 5px;
+  border-radius: 4px;
 }
 
 #storyList li:hover {
-    background-color: #eef;
-    border-color: #99f;
+  background-color: #eef;
+  border-color: #99f;
 }
 
 #storyList li.selected {
-    background-color: #bbd;
-    font-weight: bold;
+  background-color: #bbd;
+  font-weight: bold;
 }
 
 #addStoryForm {
-    margin-top: 15px;
-    margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 button {
-    padding: 6px 15px;
-    margin-right: 10px;
-    cursor: pointer;
+  padding: 6px 15px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 #content {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 h3 {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
