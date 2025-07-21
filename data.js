@@ -1,28 +1,50 @@
-// data.js
-
 window.appData = {
   stories: [
     {
       title: "İlk Hikaye",
       text: "Мальчик увидел собаку и побежал к ней.",
       dictionary: {
-        "Мальчик": { translation: "Boy", grammar: { partOfSpeech: "noun", case: "nominative" } },
-        "увидел": { translation: "saw", grammar: { partOfSpeech: "verb", tense: "past" } },
-        "собаку": { translation: "dog", grammar: { partOfSpeech: "noun", case: "accusative" } },
-        "и": { translation: "and", grammar: { partOfSpeech: "conjunction" } },
-        "побежал": { translation: "ran", grammar: { partOfSpeech: "verb", tense: "past" } },
-        "к": { translation: "to", grammar: { partOfSpeech: "preposition" } },
-        "ней": { translation: "her", grammar: { partOfSpeech: "pronoun", case: "dative" } }
+        "Мальчик": {
+          base: "Мальчик",
+          translation: "Boy",
+          type: "noun",
+          case: "nominative"
+        },
+        "увидел": {
+          base: "увидеть",
+          translation: "saw",
+          type: "verb",
+          tense: "past",
+          example: "Он увидел птицу. (He saw a bird.)"
+        },
+        "собаку": {
+          base: "собака",
+          translation: "dog",
+          type: "noun",
+          case: "accusative"
+        },
+        "и": {
+          translation: "and",
+          type: "conjunction"
+        },
+        "побежал": {
+          base: "побежать",
+          translation: "ran",
+          type: "verb",
+          tense: "past"
+        },
+        "к": {
+          translation: "to",
+          type: "preposition"
+        },
+        "ней": {
+          base: "она",
+          translation: "her",
+          type: "pronoun",
+          case: "dative"
+        }
       }
     }
   ],
-  dictionary: {
-    "Мальчик": { translation: "Boy", grammar: { partOfSpeech: "noun", case: "nominative" } },
-    "увидел": { translation: "saw", grammar: { partOfSpeech: "verb", tense: "past" } },
-    "собаку": { translation: "dog", grammar: { partOfSpeech: "noun", case: "accusative" } },
-    "и": { translation: "and", grammar: { partOfSpeech: "conjunction" } },
-    "побежал": { translation: "ran", grammar: { partOfSpeech: "verb", tense: "past" } },
-    "к": { translation: "to", grammar: { partOfSpeech: "preposition" } },
-    "ней": { translation: "her", grammar: { partOfSpeech: "pronoun", case: "dative" } }
-  }
+  dictionary: {}
 };
