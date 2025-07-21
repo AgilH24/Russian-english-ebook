@@ -6,6 +6,13 @@ body {
   margin: auto;
 }
 
+#story p {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+}
+
+
+
 #popup {
   position: fixed;
   top: 50%;
