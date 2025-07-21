@@ -61,6 +61,9 @@ function renderStory(text, storyDict) {
     if (e.target.classList.contains("word")) {
       const word = e.target.dataset.word;
       const entry = storyDict[word] || dictionary[word];
+      if (!entry) {
+            entry = dictionary[rawWord.toLowerCase()];
+        }
       if (entry) {
         popupContent.innerHTML = createPopupContent(word, entry);
         popup.classList.remove("hidden");
